@@ -1,0 +1,599 @@
+/*importando uma fonte do goole*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap');
+
+/*zerando todos os componentes*/
+*{
+  padding: 0;
+  margin:0;
+  font-family: 'Inter', sans-serif;/*caso o navegador nao interprete a fonte Inter, será utilizada a fonte padrão sans-serif*/
+}
+body{
+  background-color:#302c2c;
+}
+
+header{
+  background-color: #24252a;
+  box-shadow: 0px 3px 10px #464646;  
+}
+
+.nav-bar{
+  display: flex;
+  justify-content: space-between; /*distanciando as tres divs do headers*/
+  padding: 1.5rem 6rem; /*o rem ajuda a deixar o site responsivo*/
+}
+
+.log-out .btn{
+  width: 35px;
+  height: 35px;
+  opacity: 90%;
+  background-color: #cf1717;
+  border-radius: 10px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}  
+
+.btn{
+  opacity: 100%;
+  background-color: #0187a7;
+  border-radius: 5px;
+}
+
+.nav-list{
+  display: flex;
+  align-items: center;
+}
+
+.nav-list ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-item{
+  margin: 0 15px;
+}
+
+.nav-link{
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.login-button button{
+  border: none;
+  background-color: #0187a7;
+  padding: 10px 15px;
+  border-radius: 5px; /*configura o arredondamento no botão*/
+}
+
+.login-button button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+/*este menu somente irá aparecer quando ao tamanho da tela for menor que 700px - script.js*/
+.mobile-menu-icon{
+  display: none;
+}
+/*este menu somente irá aparecer quando ao tamanho da tela for menor que 700px - script.js*/
+.mobile-menu{
+  display: none;
+}
+
+/*configurando o menu quando a tela for menor que 730px*/
+@media screen and (max-width: 730px){
+  .nav-bar{
+    padding: 1.5rem 4rem;
+  }
+  .nav-item{
+    display: none;
+  }
+
+  .login-button{
+    display: none;
+  }
+
+  .mobile-menu-icon{
+    display: block;
+  }
+
+  .mobile-menu-icon button{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+  }
+  .mobile-menu ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-menu .nav-item{
+    display: block;
+    padding: 1.2rem;
+  }
+  .mobile-menu .login-button{
+    display: block;
+    padding: 1rem 2rem;
+  }
+  .mobile-menu .login-button button{
+    width: 100%;/*quando o menu for aberto, o botão ocupará toda a tela*/
+  }
+  /*classe que sera chamada como java script*/
+  .open{
+    display: block;
+  }
+}
+
+/*TELA DE SIGN IN - SIGN UP*/
+
+/***************CABEÇALHO***************/
+.header-signInUp{
+  display: flex;
+  padding: 15px;
+  /*centralizando a div*/
+  position: relative;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.header-signInUp h1{
+  /*background-color:blue;*/
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+/***************CORPO - FORMULÁRIO***************/
+.container-signInUp{ 
+  /*background-color: #0187a7;*/
+  background-color: rgba(255, 255, 255, 0.863);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+  /*centralizando a div*/
+  position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;  
+}
+/***************ITENS - FORMULÁRIO - TELA SIGN IN***************/
+.tela-login{
+  /*display:flex;*/
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.tela-login .email{
+  padding: 10px;
+}
+
+.tela-login input{
+  font-size: 17px;
+}
+.tela-login .password{
+  padding: 10px;
+}
+
+.r-f{
+  /*background-color:gray;*/
+  display: flex;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.tela-login .remainder{
+  /*background-color:salmon;*/
+  flex:auto;
+}
+/*.tela-login .forgot-password{
+  background-color:cyan;
+  flex:auto;
+}*/
+.tela-login .forgot-password a{
+  /*text-decoration: none;*/
+  color:black;
+}
+
+.e-r{
+  /*background-color:gray;*/
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.e-r a{
+  text-decoration: none;
+  color: black;
+}
+
+.tela-login .btn-enter{
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 8px 20px #464646;
+}
+
+.tela-login .btn-register{
+  background-color: rgb(118, 163, 118);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 8px 20px #464646;
+}
+
+/*TELA DE SIGN UP*/
+
+/***************ITENS - FORMULÁRIO - TELA SIGN UP***************/
+.tela-cadastro{
+  display:flex;
+  font-size: 20px;
+  justify-content: flex-start;
+  /*align-items: center;*/
+  flex-wrap: nowrap;
+  flex-direction: column;
+  /*background-color: red;*/
+}
+
+.tela-cadastro input{
+  font-size: 17px;
+  border-radius:5px;
+}
+.tela-cadastro .n-s{
+  /*background-color:purple;*/
+  padding: 15px;
+  display: flex;
+  /*flex: auto;*/
+  justify-content: space-between;
+}
+.tela-cadastro .nome{
+  /*background-color:cyan;*/
+  display: flex;
+  /*flex-direction: column;*/
+  padding: 10px;
+
+}
+.tela-cadastro .sobrenome{
+  /*background-color:gray;*/
+  display: flex;
+  /*flex-direction: column;*/
+  padding: 10px;
+}
+
+.tela-cadastro .data-nascimento{
+  /*background-color:gray;*/
+  display: flex;
+  /*flex-direction: column;*/
+  padding: 10px;
+}
+
+.tela-cadastro .e-u{
+  background-color:cyan;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  /*flex: auto;*/
+  flex-wrap: wrap;
+}
+.tela-cadastro .phone{
+  /*background-color:gray;*/
+  padding: 10px;
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+.tela-cadastro .email{
+  /*background-color:gray;*/
+  padding: 10px;
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+.tela-cadastro .username{
+  /*background-color:gray;*/
+  padding: 10px;
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+.tela-cadastro .p-cp{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  /*flex: auto;*/
+
+}
+
+.tela-cadastro .password{
+  /*background-color:gray;*/
+  padding: 10px;
+  display: flex;
+  /*flex-direction: column;*/
+}
+.tela-cadastro .confirmed-password{
+  /*background-color:gray;*/
+  padding: 10px;
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+.tela-cadastro .btn-register{
+  background-color: rgb(118, 163, 118);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 8px 20px #464646;
+}
+
+.tela-cadastro .btn-register .register{
+  text-decoration: none;
+  color: black;
+  opacity: 70%;
+}
+
+.btn-reg{
+  padding: 20px;
+  margin: auto;
+}
+
+.tela-cadastro .p-cp a{
+  /*cofinguração do link do botão*/
+  text-decoration: none;
+  color: black;
+}
+/*TELA INICIAL*/
+
+/***************CLASS ROW - TELA INICIAL***************/
+/*.row .row-posterLarge{
+  width: 100%;
+  object-fit: contain;
+  max-height: 350px;
+  margin-right: 5px;
+  transition: transform 450ms;
+}*/
+
+.row-poster{
+  width: 100%;
+  object-fit: contain;
+  max-height: 350px;
+  margin-right: 1px;
+  transition: transform 450ms;
+}
+.row-posters{
+  display: flex;  
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.row-poster:hover{
+ transform: scale(1.10);
+}
+
+.row-posters::-webkit-scrollbar{
+  /*display: none;*/
+  /*overflow: hidden;*/
+}
+.row{
+   color:white;
+   margin-left: 20px;
+}
+.row h3{
+  margin-top: 10px;
+}
+
+/***************ITENS - FORMULÁRIO - REDEFINIÇÃO DE SENHA***************/
+.header-redefinir{
+  display: flex;
+  padding: 15px;
+  /*centralizando a div*/
+  position: relative;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.header-redefinir h1{
+  /*background-color:blue;*/
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.container-redefinir{ 
+  /*background-color: #0187a7;*/
+  background-color: rgba(255, 255, 255, 0.863);
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+  /*centralizando a div*/
+  position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;  
+}
+
+.tela-redefinir{
+  /*display:flex;*/
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tela-redefinir .email{
+  padding: 10px;
+}
+
+.tela-redefinir input{
+  font-size: 17px;
+}
+.tela-redefinir .password{
+  padding: 10px;
+}
+
+.tela-redefinir .btn-cancel{
+  background-color: lightcoral;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 8px 20px #464646;
+}
+
+.tela-redefinir .btn-redefine{
+  background-color: rgb(118, 163, 118);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 8px 20px #464646;
+}
+
+.container-redefinir .msg h4{
+  padding: 30px;
+  text-align: center;
+}
+
+.container-redefinir .tela-redefinir .msg{
+  /*background-color:gray;*/
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.container-redefinir a{
+  text-decoration: none;
+  color: black;
+}
+
+.tela-redefinir .btn-redefinemsg{
+  background-color: rgb(118, 163, 118);
+  padding: 10px;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 8px 20px #464646;
+  text-align: center;
+}
+
+.tela-redefinir .e-r{
+  /*background-color:gray;*/
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+
+/***************CLASS ROW - MINHA LISTA***************/
+.row-poster-ml{
+  width: 100%;
+  object-fit: contain;
+  max-height: 350px;
+  margin-right: 5px;
+  transition: transform 450ms;
+}
+.row-posters-mylist{
+  display: flex;  
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  /*width: 50% ;*/
+}
+
+
+.row-poster:hover{
+ transform: scale(1.10);
+}
+
+/***************QUEM SOMOS***************/
+.quem-somos{
+  box-shadow: 2px 4px 6px 8px #855353;
+  background-color:rgb(49, 61, 61);
+  margin-top: 2.5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  }
+
+  .historia{
+    /*background-color:blue;*/
+    /*margin-right: 40%;*/
+  }
+  
+  .quem-somos .sec-hist{
+    display: flex;
+  }
+  .quem-somos h1{
+    /*background: blue;*/
+    text-align: center;
+    color:white;
+    padding: 10px;
+    font-size: 50px
+    
+  }
+  .quem-somos .our-story{
+    /*background: green;*/
+    text-align: justify;
+    color: salmon;
+    padding: 10px;
+    font-size: 40px
+  }
+
+  .quem-somos h3{
+    /*background: blue;*/
+    text-align: center;
+    color:rgb(228, 186, 181);
+    padding: 50px 10px 10px 10px;
+    font-size: 25px    
+  }
+  .quem-somos p{
+    /*background: blue;*/
+    text-align: justify;
+    color:rgb(148, 128, 128);
+    padding: 20px;
+    font-size: 20px;
+  }
+  
+  .quem-somos .our-pourpose{
+    /*background: blue;*/
+    text-align:end;
+    color: salmon;
+    padding: 50px 100px 10px 10px;
+    font-size: 40px
+  }
+  .quem-somos .sec-pourpose{
+    display: flex;
+  }
+  .quem-somos .we-are{
+    /*background: green;*/
+    text-align: center;
+    color: salmon;
+    padding: 50px 10px 10px 10px;
+    font-size: 40px
+  }
+
+  .quem-somos .founders{
+    /*background: green;*/
+    text-align: center;
+    color: salmon;
+    padding: 30px 10px 10px 10px;
+    font-size: 40px
+  }
+  .founders h3{
+    /*background: blue;*/
+    text-align: center;
+    color:rgb(228, 186, 181);
+    padding: 5px 10px 10px 10px;
+    font-size: 25px    
+  }  
